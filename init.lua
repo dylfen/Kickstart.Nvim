@@ -724,9 +724,11 @@ require('lazy').setup({ -- NOTE: Plugins can be added with a link (or for a gith
         -- for you, so that they are available from within Neovim.
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {'stylua', -- Used to format Lua code
-        'ansible-language-server', 'eslint_d', 'eslint-lsp', 'shellcheck', 'beautysh', 'black', 'jsonlint', 'hadolint',
-                                           'vale', 'cmake-language-server', 'cmakelang', 'misspell', 'prettierd',
-                                           'tailwindcss-language-server'})
+        'ansible-language-server', 'eslint_d', 'eslint-lsp', 'shellcheck', 'beautysh', 'black', 'jsonls', 'jsonlint',
+                                           'hadolint', 'vale', 'cmake-language-server', 'cmakelang', 'misspell',
+                                           'prettierd', 'tailwindcss-language-server', 'bashls', 'cssls',
+                                           'css_variables', 'docker_compose_language_service', 'dockerls', 'dotls',
+                                           'gopls', 'templ', 'html', 'htmx', 'nginx_language_server', 'pylsp', 'sqls'})
         require('mason-tool-installer').setup {
             ensure_installed = ensure_installed
         }
